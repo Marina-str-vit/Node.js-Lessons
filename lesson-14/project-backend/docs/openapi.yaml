@@ -17,6 +17,9 @@ paths:
     get:
       $ref: ../swagger/paths/movies/get.yaml
 components:
+  schemas:
+    ExternalSchema:
+      $ref: ../swagger/components/schemas/session.yaml
   securitySchemes:
     bearerAuth:
       type: http

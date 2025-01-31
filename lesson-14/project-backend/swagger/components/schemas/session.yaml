@@ -1,0 +1,23 @@
+type: object
+required:
+  - _id
+  - title
+  - director
+  - releaseYear
+properties:
+  _id:
+    description: "Session's id"
+    type: string
+    example: 65e4decdd286b30065d54af9
+  accessToken:
+    description: "Session's accessToken"
+    type: string
+    example: 1xYmIJzOVDqVYzpXIClAh3TJdCudMccw9yI4K0lb
+  refreshToken:
+    description: "Session's refreshToken"
+    type: string
+    example: 'yu9B5kBiYkJy/fPlN5q9dxkSxZF6FzUgQ70u8Gjn'
+  userId:
+    description: "Movie's parent id"
+    type: string
+    example: 67816eaee340e454c53ef7c0
