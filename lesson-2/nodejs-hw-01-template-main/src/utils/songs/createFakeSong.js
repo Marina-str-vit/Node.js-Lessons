@@ -1,3 +1,4 @@
+//  функ. що повторюються виносимо в папку utils!!
 import { faker } from "@faker-js/faker";
 
 export const createFakeSong = ()=> ({
