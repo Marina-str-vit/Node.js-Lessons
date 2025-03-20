@@ -1,3 +1,5 @@
+//  функ. що повторюються виносимо в папку utils!!
+
 import {readFile} from "node:fs/promises";
 
 import { PATH_DB_SONGS } from "../../constants/songs.js";
