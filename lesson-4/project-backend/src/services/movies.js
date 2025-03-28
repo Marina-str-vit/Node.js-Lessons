@@ -1,4 +1,4 @@
-// для бізнес-логіки
+// папка для бізнес-логіки
 
 import MovieCollection from "../db/models/Movie.js";
 
