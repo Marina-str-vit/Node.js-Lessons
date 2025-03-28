@@ -4,7 +4,7 @@
 // 3 - оформлюю запити  app.get("/", (req, res)
 
 import express from "express";
-import cors from "cors";
+import cors from "cors"; // дозволяє різним доменам працювати один з одним
 import pino from "pino-http";
 
 import { getEnvVar } from "./utils/getEnvVar.js";
@@ -30,13 +30,13 @@ export const startServer = ()=> {
     // якщо прийде get-запит, то виконати наступну функцію
     app.get("/", (req, res)=> {
         console.log(req.method); // щоб побачити яким методом прийшли дані
-        console.log(req.url); // щоб побичити звідки прийшло
+        console.log(req.url); // щоб побачити звідки прийшло
         res.json({
             message: "Start work"
         });
     });
 
-  // тут не знайшов відповідні дані для запиту 
+  // тут не знайшов відповідні дані для запиту, щоб сервер не ліг потрібно зроьити через json
     app.use((req, res)=> {
         res.status(404).json({
             message: `${req.url} not found`
