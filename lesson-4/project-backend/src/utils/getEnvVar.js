@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "dotenv/config"; // допомагає нам взяти Порт з нашого компа
 
 export const getEnvVar = (name, defaultValue)=> {
     const value = process.env[name];
