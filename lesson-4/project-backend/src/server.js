@@ -4,7 +4,7 @@ import pino from "pino-http";
 
 import * as movieServices from "./services/movies.js";
 
-import { getEnvVar } from "./utils/getEnvVar.js";
+import { getEnvVar } from "./utils/getEnvVar.js"; // читає значення Порта
 
 export const startServer = ()=> {
     const app = express();
