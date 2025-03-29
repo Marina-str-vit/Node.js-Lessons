@@ -18,18 +18,19 @@ export const startServer = ()=> {
     // }));
 // 1 - робимо запит до БД
     app.get("/movies", async (req, res)=> {
+// див.папку services - це папка для бізнес-логіки        
         const data = await movieServices.getMovies(); // 2 - отримуємо відповідь
 // 3 - пересилаємо на фронтенд результат
         res.json({
-            status: 200,
-            messsage: "Successfully found movies",
+            status: 200, // для краси розписали
+            messsage: "Successfully found movies", // для краси розписали
             data,
         });
     });
 
     app.get("/movies/:id", async(req, res)=> {
         const {id} = req.params;
-
+// див.папку services - це папка для бізнес-логіки
         const data = await movieServices.getMovieById(id);
 
         if(!data) {
