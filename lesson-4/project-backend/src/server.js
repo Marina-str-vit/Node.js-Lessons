@@ -16,10 +16,10 @@ export const startServer = ()=> {
     //         target: "pino-pretty"
     //     }
     // }));
-
+// 1 - робимо запит до БД
     app.get("/movies", async (req, res)=> {
-        const data = await movieServices.getMovies();
-
+        const data = await movieServices.getMovies(); // 2 - отримуємо відповідь
+// 3 - пересилаємо на фронтенд результат
         res.json({
             status: 200,
             messsage: "Successfully found movies",
