@@ -16,7 +16,7 @@ export const startServer = ()=> {
     //         target: "pino-pretty"
     //     }
     // }));
-// 1 - робимо запит до БД
+// 1 - робимо асинхронний запит до БД
     app.get("/movies", async (req, res)=> {
 // див.папку services - це папка для бізнес-логіки        
         const data = await movieServices.getMovies(); // 2 - отримуємо відповідь
