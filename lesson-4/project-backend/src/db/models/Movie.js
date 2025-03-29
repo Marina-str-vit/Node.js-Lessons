@@ -1,8 +1,9 @@
 import {Schema, model} from "mongoose";
 
-const movieSchema = new Schema({
+// це є обмеження на рівні запитів до бази даних
+const movieSchema = new Schema({  // монгуз схема - як має виглядати об1єкт в коллекції
     title: {
-        type: String,
+        type: String, 
         required: true,
     },
     director: {
@@ -21,9 +22,9 @@ const movieSchema = new Schema({
         required: true,
     }
 });
-
-const MovieCollection = model("movie", movieSchema);
-// categories => category
+// це клас який з'єднаний з колекцією movie, якщо колекції НЕ ІСНУЄ, то mongoose її створить
+const MovieCollection = model("movie", movieSchema); // це клас, що робить запит
+// categories => category // розуміє однину та множину, як треба сам може її перетворювати
 // mice => mouse
 
 export default MovieCollection;
