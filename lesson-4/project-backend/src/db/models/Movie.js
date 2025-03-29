@@ -10,9 +10,9 @@ const movieSchema = new Schema({  // монгуз схема - як має ви�
         type: String,
         required: true,
     },
-    favorite: {
+    favorite: {  // УВАГА СПЕЦІФІКА mongoose
         type: Boolean,
-        default: false,
+        default: false, // щоб сюди не додалось поле NULL потрібно вказати  required: true,
         required: true,
     },
     type: {
