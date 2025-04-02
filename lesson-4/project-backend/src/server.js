@@ -29,10 +29,11 @@ export const startServer = ()=> {
     });
 
     app.get("/movies/:id", async(req, res)=> {
-        const {id} = req.params;
+    // всі динамічни дані на шляху запиту, ті що написані через " : " express зберігає в req.params !!
+        const {id} = req.params; 
 // див.папку services - це папка для бізнес-логіки
         const data = await movieServices.getMovieById(id);
-
+// якщо це не написати то прийде лише назва data: null,
         if(!data) {
             return res.status(404).json({
                 status: 404,
