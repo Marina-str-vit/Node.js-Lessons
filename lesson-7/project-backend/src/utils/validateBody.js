@@ -1,10 +1,11 @@
 import createError from "http-errors";
-
+// створюю додатковий декоратор
 export const validateBody = schema => {
     const func = async (req, res, next)=> {
         try {
             await schema.validateAsync(req.body, {
-                abortEarly: false,
+// по замовчуванню завжди стоїть тру і тому перевірка закіньчується на першій помилці, а нам треба йти далі
+                abortEarly: false,  // робимо так, щоб шукало всі помилки
             });
             next();
         }
