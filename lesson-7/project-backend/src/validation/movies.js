@@ -11,7 +11,7 @@ export const movieAddSchema = Joi.object({
         "number.min": `Movie before ${minReleaseYear} not found`
     }),
 });
-
+// це для Patch запитів, бо хочимо змінити лише деякі поля
 export const movieUpdateSchema = Joi.object({
     title: Joi.string(),
     director: Joi.string(),
